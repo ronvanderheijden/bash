@@ -1,14 +1,12 @@
 ## SCRIPTING
 
-shift
--
+**shift**
 ```sh
 arg1=$1; shift
 arg2=$1
 ```
 
-statements
--
+**statements**
 ```sh
 [[ -z "$1" ]] && echo 'Missing parameter' && exit 1
 
@@ -18,8 +16,7 @@ if [ ! -d "source" ]; then
 fi
 ```
 
-cases
--
+**cases**
 ```sh
 case "$1" in
     # i rest my case
@@ -28,8 +25,7 @@ case "$1" in
 esac
 ```
 
-read
--
+**read**
 ```sh
 read -p "Question? " answer
 
@@ -43,34 +39,30 @@ ask "What is your name" "Ron"
 
 ## SEARCH
 
-sed - search / replace
--
-```sh
-# sed s/search_pattern/replace_pattern/ inputfile
-echo 121 | sed s/1/8/g
-# result: 828
-```
-
-awk - search / execute
--
-```sh
-# awk search_pattern {actions} inputfile
-echo 121 | awk '{print $1*4}'
-# result: 484
-```
-
-grep - search
--
+**grep - search**
 ```sh
 # grep -e search_pattern inputfile
 echo abc123 | grep -Po "([0-9]{2})"
 # result: 12
 ```
 
+**sed - search / replace**
+```sh
+# sed s/search_pattern/replace_pattern/ inputfile
+echo 121 | sed s/1/8/g
+# result: 828
+```
+
+**awk - search / execute**
+```sh
+# awk search_pattern {actions} inputfile
+echo 121 | awk '{print $1*4}'
+# result: 484
+```
+
 ## SNIPPETS
 
-Import database files
--
+**Import database files**
 ```sh
 #!/usr/bin/sh
 
