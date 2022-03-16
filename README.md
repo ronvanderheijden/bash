@@ -62,20 +62,4 @@ echo 121 | awk '{print $1*4}'
 
 ## SNIPPETS
 
-**Import database files**
-```sh
-#!/usr/bin/sh
-
-for file in /source/*.sql;
-do
-    database=$(echo $file | grep -Po '([a-z]+)(?=\.sql)')
-
-    if mysqladmin create $database &> /dev/null;
-    then
-        mysql $database < $file
-        echo "Created and imported database '$database'."
-    else
-        echo "Database '$database' already exists."
-    fi
-done
-```
+See https://github.com/ronvanderheijden/bash/tree/master/snippets
