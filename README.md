@@ -1,3 +1,16 @@
+## SSH
+
+```
+ssh-keygen -t rsa -P "" -f /home/client/.ssh/id_rsa -q
+
+chmod 700 /home/client/.ssh/
+chmod 600 /home/client/.ssh/id_rsa
+chmod 644 /home/client/.ssh/id_rsa.pub
+
+chmod 600 /home/server/.ssh/authorized_keys # cp id_rsa.pub authorized_keys
+
+```
+
 ## SCRIPTING
 
 **shift**
